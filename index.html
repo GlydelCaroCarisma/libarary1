@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('lib2.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container { 
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 2em; 
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-label, input[type="text"], input[type="password"], input[type="email"], input[type="submit"] { 
+            display: block; 
+            width: 100%; 
+            margin-top: 1em; 
+        }
+        input[type="text"], input[type="email"], input[type="password"] { 
+            padding: 0.5em; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+        }
+        input[type="submit"] { 
+            padding: 0.5em 1em; 
+            background-color: #007bff; 
+            color: #fff; 
+            border: none; 
+            border-radius: 5px;
+            cursor: pointer; 
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
+        }
+        .radio-group {
+            margin-top: 1em;
+        }
+        .radio-group label {
+            margin-right: 10px;
+        }
+        .a {
+            color: white;
+        }
+    </style>  
+</head>
+<body>
+    <div class="container"> 
+        <form id="signupForm" onsubmit="registration(event)">
+            <div>
+                <label for="lastname" class="form-label">Lastname</label>
+                <input type="text" id="lastname" placeholder="Lastname">
+            </div>
+            <div>    
+                <label for="firstname" class="form-label">Firstname</label>
+                <input type="text" id="firstname" placeholder="Firstname">
+            </div>
+            <div>
+                <label for="middlename" class="form-label">Middlename</label>
+                <input type="text" id="middlename" placeholder="Middlename">
+            </div>
+            <div>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="idno" class="form-label">ID No.</label>
+                <input type="text" id="idno" placeholder="ID No.">
+            </div>
+            <div class="radio-group">
+                <label>User Type:</label>
+                <select name="" id="user">
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Sign Up">
+            </div>
+            <div class="link">
+                <label>Already have account? <a href="src/login.html">Sign In here!</a></label>
+            </div>
+        </form>
+    </div>
+    <a href="#" class="a">Faculty</a>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

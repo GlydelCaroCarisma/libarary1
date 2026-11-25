@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('../lib2.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container label {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .container input[type="submit"] {
+            width: 150px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .container a {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .container .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <form id="signupForm" onsubmit="login(event)">
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" placeholder="Email" required autocomplete="email">
+            </div>
+            <div>    
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Log In">
+            <div class="link">
+                <label>No Account Yet? <a href="http://localhost/library1/">Sign Up here!</a></label>
+            </div>
+        </form>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
